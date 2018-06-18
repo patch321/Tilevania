@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilevania", "Assembly-CSharp-firstpass.csproj", "{CCCA0DBC-8D46-BCD3-6E01-D959AC1AC629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilevania", "Assembly-CSharp.csproj", "{2E3A31A4-F7D8-19D1-18F6-E270EC5E8CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilevania", "Assembly-CSharp-Editor-firstpass.csproj", "{DBEFA150-8F45-85F3-A02B-7CF0B9986EF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCCA0DBC-8D46-BCD3-6E01-D959AC1AC629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCA0DBC-8D46-BCD3-6E01-D959AC1AC629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCA0DBC-8D46-BCD3-6E01-D959AC1AC629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCA0DBC-8D46-BCD3-6E01-D959AC1AC629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E3A31A4-F7D8-19D1-18F6-E270EC5E8CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E3A31A4-F7D8-19D1-18F6-E270EC5E8CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E3A31A4-F7D8-19D1-18F6-E270EC5E8CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E3A31A4-F7D8-19D1-18F6-E270EC5E8CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEFA150-8F45-85F3-A02B-7CF0B9986EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEFA150-8F45-85F3-A02B-7CF0B9986EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEFA150-8F45-85F3-A02B-7CF0B9986EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEFA150-8F45-85F3-A02B-7CF0B9986EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
