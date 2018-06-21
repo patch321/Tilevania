@@ -70,27 +70,36 @@ public class Player : MonoBehaviour
 			{
 				Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
 				myRigidBody.velocity += jumpVelocityToAdd;
-				print("Jumping");
 			}
 		}
 	}
 
 	private void ClimbLadder()
 	{
-		if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")))
+		if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ladder"))) // if feet are not touching ladder
         {
             myAnimator.SetBool("Climbing", false);
             myRigidBody.gravityScale = regGravity;
+            myAnimator.speed = animatorSpeed;
             return;
         }
 
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+            myAnimator.SetBool("Climbing", false);
+            myRigidBody.gravityScale = regGravity;
+            myAnimator.speed = animatorSpeed;
+        }
+        else
+        {
+            myAnimator.SetBool("Climbing", true);
+            myRigidBody.gravityScale = Mathf.Epsilon;
+        }
+
 		float controlThrow = CrossPlatformInputManager.GetAxis("Vertical"); //value is between -1 and 1
-		Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
-		myRigidBody.velocity = climbVelocity;
+        myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
 
-		bool isPlayerClimbing = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon;
-
-        if (!isPlayerClimbing)
+        if (controlThrow == 0 && !myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             myAnimator.speed = 0f;
         }
@@ -98,8 +107,6 @@ public class Player : MonoBehaviour
         {
             myAnimator.speed = animatorSpeed;
         }
-        myAnimator.SetBool("Climbing", true);
-        myRigidBody.gravityScale = Mathf.Epsilon;
 	}
 
 	private void FlipSprite()
